@@ -141,6 +141,12 @@ function executeCommand(command, data) {
             var newCommand = data.split(",");
             executeCommand(newCommand[0], newCommand[1]);
         });
+    } else if (command === "clear-log") {
+        fs.writeFile("./log.txt", "", function(error) {
+            if (error)
+                return console.log(error);
+        })
+        console.log("log.txt has been cleared.");
     } else {
         // Log the correct commands if an incorrect one is put in
        console.log("\nPlease enter a valid command.")
