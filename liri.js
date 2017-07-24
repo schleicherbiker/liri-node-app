@@ -152,8 +152,8 @@ function executeCommand(command, data) {
        console.log("\nPlease enter a valid command.")
        console.log("1. my-tweets");
        console.log("2. spotify-this-song <query>");
-       console.log("2. movie-this <query>");
-       console.log("2. do-what-it-says\n");
+       console.log("3. movie-this <query>");
+       console.log("4. do-what-it-says\n");
        fs.appendFile("./log.txt", "\nINPUT: Invalid Input\n", function(error) {
                 if (error)
                     return console.log(error);
